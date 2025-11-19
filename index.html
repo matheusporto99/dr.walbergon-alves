@@ -615,7 +615,7 @@
                     </div>
                     <h4 class="mt-4 text-lg font-semibold text-gray-900">Preencha seus dados</h4>
                     <p class="mt-2 text-gray-600 text-sm">
-                        Informe nome, cidade e WhatsApp para que a equipe entenda seu caso.
+                        Informe nome completo, e-mail e WhatsApp para que a equipe entenda seu caso.
                     </p>
                 </div>
 
@@ -695,8 +695,8 @@
             <h2>Preencha seus dados</h2>
             <form id="lead-form">
                 <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
                 <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp com DDD" required>
-                <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
                 <button type="submit" class="btn-whatsapp-form">
                     Enviar e ir para o WhatsApp
                 </button>
@@ -738,10 +738,10 @@
             e.preventDefault();
 
             const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
             const whatsapp = document.getElementById("whatsapp").value.trim();
-            const cidade = document.getElementById("cidade").value.trim();
 
-            const mensagem = `Olá, meu nome é ${nome}. Moro em ${cidade} e meu WhatsApp é ${whatsapp}. Vim pela página de avaliação da pele e quero agendar uma consulta.`;
+            const mensagem = `Olá, meu nome é ${nome}. Meu e-mail é ${email} e meu WhatsApp é ${whatsapp}. Vim pela página de avaliação da pele e quero agendar uma consulta.`;
 
             const url = `https://wa.me/${WALBER_NUMBER}?text=${encodeURIComponent(mensagem)}`;
 

@@ -741,7 +741,8 @@
             const email = document.getElementById("email").value.trim();
             const whatsapp = document.getElementById("whatsapp").value.trim();
 
-            const mensagem = `Olá, sou ${nome}. Quero agendar uma avaliação médica da pele com o Dr. Walber.`;
+            // ✅ MENSAGEM ALTERADA AQUI
+            const mensagem = `Olá, sou ${nome}. Gostaria de obter mais informações sobre os tratamentos do Dr. Walber.`;
 
             const url = `https://wa.me/${WALBER_NUMBER}?text=${encodeURIComponent(mensagem)}`;
 
